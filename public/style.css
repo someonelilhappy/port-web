@@ -1,0 +1,136 @@
+* {
+    font-family: sans-serif;
+}
+
+html, body, #container {
+    height: 100%;
+}
+
+header {
+    width: 90%;
+    background-color: #131313;
+    position: fixed;
+    left: 4%;
+    top: 0.5em;
+    padding: 1%;
+    border-radius: 5em;
+    display: flex;
+    justify-content: center;
+    font-size: 100%;
+    transition: top 0.5s ease-in-out;
+}
+
+.hide-header {
+    top: -5em;
+}
+
+.header-button {
+    border: none;
+    outline: none;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding: 0.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 2em;
+    background-color: #0000;
+    color: #ffff;
+    /*font-size: large;*/
+    font-size: 1em;
+    cursor: default;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-button:hover {
+    background-color: #2a2a2a;
+    /*padding: 1vw;*/
+    cursor: pointer;
+    animation: color-change 5s ease infinite;
+}
+
+@keyframes color-change {
+    0%  { color: #520096; }
+    25% { color: #8435c4; }
+    50% { color: #b172e6; }
+    75% { color: #562a7a; }
+    100%{ color: #520096; }
+}
+
+body {
+    background-color: #020202;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+#about {
+    margin-top: 10em;
+    text-align: center;
+    color: white;
+    background-color: #080808;
+    min-width: 80vw;
+    padding: 5vw;
+    border-radius: 1.5em;
+}
+
+#projects {
+    margin-top: 10em;
+    text-align: center;
+    color: white;
+    background-color: #080808;
+    min-width: 80vw;
+    padding: 5vw;
+    border-radius: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    height: fit-content;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin-bottom: 10vh;
+    border-radius: 1em;
+    width: fit-content;
+    background-color: #0000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.project:hover {
+    scale: 105%;
+    background-color: #20202070;
+    border: 1px solid #000;
+    animation: anim-border 2s ease infinite;
+}
+
+.description {
+    display: none;
+}
+
+.project:hover .description {
+    display: block;
+}
+
+@keyframes anim-border {
+    0%   { border-color: #52009618; }
+    25%  { border-color: #5200967c; }
+    50%  { border-color: #520096; }
+    75%  { border-color: #52009677; }
+    100% { border-color: #5200960c; }
+}
+
+.proj-img {
+    width: 30%;
+}
+
+.proj-span {
+    margin-top: 1em;
+}
